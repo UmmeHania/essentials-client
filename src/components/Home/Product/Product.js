@@ -6,19 +6,13 @@ import { Link } from 'react-router-dom';
 const Product = ({ product }) => {
     const { title, img, desc, price, supplier, quantity } = product;
     return (
-        <div className='product border'>
-            {/* <img className='w-100' src={img} alt="" />
-            <h3 className='fw-bold'>{title}</h3>
-            <p>{desc}</p>
-            <h4>{price}</h4>
-            <Link to='/checkout'><Button variant="primary">Update</Button></Link> */}
-
+        <div className='product'>
             <CardGroup className="">
-                <Card className='w-100'>
+                <Card className='height login-form'>
                     <div className='text-center'>
                         <Card.Img className='w-50' variant="top" src={img} />
                     </div>
-                    <Card.Body>
+                    <Card.Body className='text'>
                         <Card.Title className='text-center fw-bold'>{title}</Card.Title>
                         <Card.Text >
                             {desc}

@@ -9,7 +9,7 @@ const NotFound = () => {
             <div>
                 <h2 className='fw-bold text-center my-3'>Sorry!Your desire page is not Found.
 
-                    <Link className='go' to='/'>Go to Home</Link>
+                    {/* <Link className='go' to='/'>Go to Home</Link> */}
                 </h2>
             </div>
             <div className=''>

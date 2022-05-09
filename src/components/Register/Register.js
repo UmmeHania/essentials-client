@@ -3,8 +3,8 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
-import auth from '../firebase.init';
-import GoogleLogin from '../Login/GoogleLogin/GoogleLogin';
+import auth from '../firebase.int';
+import GoogleLogIn from '../LogIn/GoogleLogIn/GoogleLogIn';
 
 const Register = () => {
     const [
@@ -57,7 +57,7 @@ const Register = () => {
                     Register
                 </Button>
                 <p className='mt-3'>Already have an account? <Link to="/login" className='text-primary text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
-                <GoogleLogin></GoogleLogin>
+                <GoogleLogIn></GoogleLogIn>
             </Form>
 
 

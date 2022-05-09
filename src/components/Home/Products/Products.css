@@ -1,3 +1,7 @@
 .products-container {
     height: 400px;
 }
+
+.text {
+    padding-bottom: 5px;
+}

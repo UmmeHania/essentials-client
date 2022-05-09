@@ -41,22 +41,40 @@ const Header = () => {
                             </NavLink>
                             <NavLink
                                 className="link"
-                                to="/inventory"
+                                to="/inventory/:id"
 
                             >
                                 INVENTORY
                             </NavLink>
-                            <NavLink
-                                className="link"
-                                to="/checkout"
 
-                            >
-                                CHECKOUT
-                            </NavLink>
                             {
 
                                 user ?
-                                    <button className='btn btn-primary text-decoration-none ' onClick={handleSignOut}>SIGN OUT</button>
+                                    <>
+
+                                        <NavLink
+                                            className="link"
+                                            to="/manageitems"
+
+                                        >
+                                            MANAGE ITEMS
+                                        </NavLink>
+                                        <NavLink
+                                            className="link"
+                                            to="/additem"
+
+                                        >
+                                            ADD ITEM
+                                        </NavLink>
+                                        <NavLink
+                                            className="link"
+                                            to="/myitems"
+
+                                        >
+                                            MY ITEMS
+                                        </NavLink>
+                                        <button className='btn btn-primary text-decoration-none ' onClick={handleSignOut}>SIGN OUT</button>
+                                    </>
                                     :
                                     <NavLink
                                         className="link"

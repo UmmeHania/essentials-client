@@ -1,15 +1,4 @@
-// import React from 'react';
 
-// const Footer = () => {
-//     return (
-//         <div>
-//             <h1>this is footer</h1>
-
-//         </div>
-//     );
-// };
-
-// export default Footer;
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -88,7 +77,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="row py-3">
-                    <p className="text-center">Copyright 2022 <span className="text-muted">ESSENTIALS</span> | Design By Hania</p>
+                    <p className="text-center">Copyright 2022 <span className="text-muted">ESSENTIALS</span> | Designed By Hania</p>
                 </div>
             </Container>
         </div>

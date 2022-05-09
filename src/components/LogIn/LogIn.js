@@ -8,6 +8,7 @@ import GoogleLogIn from './GoogleLogIn/GoogleLogIn';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './LogIn.css'
 
 const Login = () => {
     const emailRef = useRef('');
@@ -64,9 +65,9 @@ const Login = () => {
     }
 
     return (
-        <div className='container w-50 mx-auto'>
+        <div className='container w-50 mx-auto mb-4'>
             <h1 className='text-primary text-center fw-bold'>Please login!</h1>
-            <Form onSubmit={handleSubmit} className='login-form'>
+            <Form onSubmit={handleSubmit} className='form'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
