@@ -2,10 +2,10 @@ import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import google from '../../Assets/google.png'
-import auth from '../../firebase.init';
-import './GoogleLogin.css'
+import auth from '../../firebase.int';
+import './GoogleLogIn.css'
 
-const GoogleLogin = () => {
+const GoogleLogIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     let errorElement;
@@ -33,4 +33,4 @@ const GoogleLogin = () => {
     );
 };
 
-export default GoogleLogin;
+export default GoogleLogIn;
