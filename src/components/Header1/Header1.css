@@ -1,0 +1,11 @@
+.link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.link:hover {
+    color: violet;
+}
