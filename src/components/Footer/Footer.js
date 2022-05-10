@@ -13,7 +13,8 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className="footer-main">
-            <Container className="pt-5">
+            <hr />
+            <Container className="pt-3">
                 <div className="row footer-details">
                     <div className="col-md-4">
                         <div className='footer-text'>
@@ -34,8 +35,8 @@ const Footer = () => {
                                 <LocalPhoneIcon />
                             </div>
                             <div className="number">
-                                <span>+8801515226983</span><br />
-                                <span>+8801833921579</span>
+                                <span> +1 732-968-3500</span><br />
+                                <span> +1 732-968-3501</span>
                             </div>
                         </div>
                         <div className="d-flex align-items-center">

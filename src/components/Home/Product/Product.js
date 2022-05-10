@@ -1,10 +1,18 @@
 import React from 'react';
 import { Button, Card, CardGroup } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Product = ({ product }) => {
-    const { name, img, description, price, supplier, quantity } = product;
+    const { _id, name, img, description, price, supplier, quantity } = product;
+    const navigate = useNavigate();
+
+
+    const navigateToProductDetail = _id => {
+        navigate(`/inventory/${_id}`);
+
+    }
+
     return (
         <div className='product'>
             <CardGroup className="">
@@ -28,7 +36,7 @@ const Product = ({ product }) => {
                         </Card.Text>
                     </Card.Body>
 
-                    <button className='btn btn-primary'>Update</button>
+                    <button onClick={() => navigateToProductDetail(_id)} className='btn btn-primary'>Update</button>
 
                 </Card>
 

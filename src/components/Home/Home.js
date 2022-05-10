@@ -6,6 +6,7 @@ import Products from './Products/Products';
 import './Home.css'
 import Featured from './Featured/Featured';
 import { Link } from 'react-router-dom';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 const Home = () => {
     return (
@@ -15,7 +16,9 @@ const Home = () => {
             <h1 className='text-center fw-bold fs-1'>Inventory Items</h1>
             <hr />
             <Products></Products>
-            <h4 className=''><Link className='manage-text' to='/manageitems'>Manage Items</Link></h4>
+            <div className='text-center'>
+                <h5 className=''><Link className='manage-text' to='/manageitems'>Manage Items <ArrowCircleRightIcon className='fs-3'></ArrowCircleRightIcon></Link></h5>
+            </div>
             <hr />
             <h1 className='text-center fw-bold fs-1'>Featured Products</h1>
             <hr />

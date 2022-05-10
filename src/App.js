@@ -4,6 +4,7 @@ import Blog from './components/Blog/Blog';
 import Footer from './components/Footer/Footer';
 import Header1 from './components/Header1/Header1';
 import Home from './components/Home/Home';
+import Product from './components/Home/Product/Product';
 import Inventory from './components/Inventory/Inventory';
 import LogIn from './components/LogIn/LogIn';
 import RequireAuth from './components/LogIn/RequireAuth/RequireAuth';
@@ -27,6 +28,7 @@ function App() {
             <Inventory></Inventory>
           </RequireAuth>
         } />
+        {/* <Route path='/inventory/:inventoryId' element={<Product></Product>} /> */}
         <Route path='/login' element={<LogIn></LogIn>} />
         <Route path='/register' element={<Register></Register>} />
         <Route path='/myitems' element={<MyItems></MyItems>} />
