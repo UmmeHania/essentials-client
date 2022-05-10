@@ -1,83 +1,83 @@
 [
     {
         "id": 1,
-        "title": "Refrigerator",
+        "name": "Refrigerator",
         "img": "https://i.ibb.co/0nj1yGz/beee4227ffe366c63aa38536762e5c62.jpg",
         "price": "$500",
-        "desc": "Best budget refrigerator and best for daily uses",
+        "description": "Best budget refrigerator and best for daily uses.",
         "quantity": "10",
         "supplier": "Mr. Smith"
     },
     {
         "id": 2,
-        "title": "LED TV",
-        "img": "https://i.ibb.co/DwVtcvL/159143994432-MYO1-s.jpg",
-        "price": "$300",
-        "desc": "Best budget LED TV and best for daily uses",
-        "quantity": "5",
-        "supplier": "Best Electronics"
+        "name": "Blender",
+        "img": "https://i.ibb.co/sPqxs4C/WBL-15-GM75-1.png",
+        "price": "$200",
+        "description": "Best budget Blender and best for daily uses",
+        "quantity": "10",
+        "supplier": "Audrey Jenna"
     },
     {
         "id": 3,
-        "title": "Washing Machine",
+        "name": "Washing Machine",
         "img": "https://i.ibb.co/cxX91yX/eco-13-kg-semi-auto-washing-machine.jpg",
         "price": "$400",
-        "desc": "Best budget Washing Machine and best for daily uses",
+        "description": "Best budget Washing Machine and best for daily uses",
         "quantity": "8",
         "supplier": "ECO Hub"
     },
     {
         "id": 4,
-        "title": "Air Conditioner",
+        "name": "Air Conditioner",
         "img": "https://i.ibb.co/SRrJjdS/jamuna-jec-18od-15ton-split-ac.jpg",
         "price": "$500",
-        "desc": "Best budget Air Conditioner and best for daily uses",
+        "description": "Best budget Air Conditioner and best for daily uses",
         "quantity": "9",
         "supplier": "Sarah Store"
     },
     {
         "id": 5,
-        "title": "Blender",
-        "img": "https://i.ibb.co/sPqxs4C/WBL-15-GM75-1.png",
-        "price": "$200",
-        "desc": "Best budget Blender and best for daily uses",
-        "quantity": "10",
-        "supplier": "Audrey Jenna"
-    },
-    {
-        "id": 6,
-        "title": "Rice Cooker",
-        "img": "https://i.ibb.co/vB5SBsk/bac0877d0d6de1380a6ff742476a7c56.jpg",
-        "price": "$220",
-        "desc": "Best budget Rice Cooker and best for daily uses",
-        "quantity": "4",
-        "supplier": "John Sumdany"
-    },
-    {
-        "id": 7,
-        "title": "Induction",
+        "name": "Induction",
         "img": "https://i.ibb.co/mSRTGdK/Stove.jpg",
         "price": "$100",
-        "desc": "Best budget refrigerator and convenient for daily uses",
+        "description": "Best budget refrigerator and convenient for daily uses",
         "quantity": "4",
         "supplier": "Erena Zara"
     },
     {
+        "id": 6,
+        "name": "Refrigerator",
+        "img": "https://i.ibb.co/0nj1yGz/beee4227ffe366c63aa38536762e5c62.jpg",
+        "price": "$600",
+        "description": "Best budget refrigerator and best for daily uses",
+        "quantity": "1",
+        "supplier": "Mr. Smith"
+    },
+    {
+        "id": 7,
+        "name": "LED TV",
+        "img": "https://i.ibb.co/DwVtcvL/159143994432-MYO1-s.jpg",
+        "price": "$300",
+        "description": "Best budget LED TV and best for daily uses",
+        "quantity": "5",
+        "supplier": "Best Electronics"
+    },
+    {
         "id": 8,
-        "title": "Microwave Oven",
+        "name": "Microwave Oven",
         "img": "https://i.ibb.co/B38sZRD/1629948647microwave-oven.jpg",
         "price": "$700",
-        "desc": "Best budget Microwave oven and convenient for daily uses",
+        "description": "Best budget Microwave oven and convenient for daily uses",
         "quantity": "7",
         "supplier": "Sarina Smith"
     },
     {
         "id": 9,
-        "title": "Refrigerator",
-        "img": "https://i.ibb.co/0nj1yGz/beee4227ffe366c63aa38536762e5c62.jpg",
-        "price": "$600",
-        "desc": "Best budget refrigerator and best for daily uses",
-        "quantity": "1",
-        "supplier": "Mr. Smith"
+        "name": "Rice Cooker",
+        "img": "https://i.ibb.co/vB5SBsk/bac0877d0d6de1380a6ff742476a7c56.jpg",
+        "price": "$220",
+        "description": "Best budget Rice Cooker and best for daily uses",
+        "quantity": "4",
+        "supplier": "John Sumdany"
     }
 ]

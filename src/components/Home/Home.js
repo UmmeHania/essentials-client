@@ -5,6 +5,7 @@ import Banner from './Banner/Banner';
 import Products from './Products/Products';
 import './Home.css'
 import Featured from './Featured/Featured';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -14,15 +15,16 @@ const Home = () => {
             <h1 className='text-center fw-bold fs-1'>Inventory Items</h1>
             <hr />
             <Products></Products>
+            <h4 className=''><Link className='manage-text' to='/manageitems'>Manage Items</Link></h4>
             <hr />
             <h1 className='text-center fw-bold fs-1'>Featured Products</h1>
             <hr />
             <Featured></Featured>
-            <div className="background px-5 py-5 mt-3">
-                <h5 className="text-center">WHY ESSENTIALS!</h5>
-                <h1 className="text-center mb-2">Why You Are join With <br />ESSENTIALS
-                    ?</h1>
-                <div className="row ">
+            <div className="background px-5 py-5 my-3">
+                <h4 className="text-center mb-5 fw-bold">WHY ESSENTIALS!</h4>
+                {/* <h1 className="text-center mb-2">Why You Are join With <br />ESSENTIALS
+                    ?</h1> */}
+                <div className="row mb-2">
 
                     <div className="col-3 card-ex">
                         <div>

@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.submit:hover {
+    background-color: #9279e6;
+}
