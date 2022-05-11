@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useParams } from 'react-router-dom';
 import AddItem from './components/AddItem/AddItem';
 import Blog from './components/Blog/Blog';
 import Footer from './components/Footer/Footer';
@@ -16,6 +16,7 @@ import Register from './components/Register/Register';
 
 
 function App() {
+
   return (
     <div className="">
       <Header1></Header1>

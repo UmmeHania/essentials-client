@@ -75,13 +75,13 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <div> <Button className='d-block mx-auto w-50' variant="primary" type="submit">
+                <div> <Button className='d-block mx-auto w-100' variant="primary" type="submit">
                     Submit
                 </Button></div>
                 {errorElement}
-                <p className='mt-3'>New to DENTISTRY? <span className='text-primary'><Link className='form-link' onClick={navigateRegister} to='/register'>Please Register here!</Link></span></p>
+                <p className='mt-3'>New to ESSENTIALS? <span className='text-primary'><Link className='form-link' onClick={navigateRegister} to='/register'>Please Register here!</Link></span></p>
                 <p className='mt-3'>Forget Password? <span className='text-primary'><button className='btn btn-link text-decoration-none' onClick={resetPassword} >Reset password </button></span></p>
-                <GoogleLogIn></GoogleLogIn>
+                <GoogleLogIn className='W-100'></GoogleLogIn>
                 <ToastContainer></ToastContainer>
             </Form>
 

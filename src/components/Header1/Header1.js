@@ -39,13 +39,13 @@ const Header = () => {
                             >
                                 BLOG
                             </NavLink>
-                            <NavLink
+                            {/* <NavLink
                                 className="link"
                                 to="/inventory/:id"
 
                             >
                                 INVENTORY
-                            </NavLink>
+                            </NavLink> */}
 
                             {
 
