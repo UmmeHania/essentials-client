@@ -23,13 +23,13 @@ const Footer = () => {
                         <p>
                             ESSENTIALS is the one of the biggest home appliances hub located in United State. We serve you as the way you want and promised the best services.
                         </p>
-                        <h4>Follow Us:</h4>
+                        <h4 className='fw-bold'>Follow Us:</h4>
                         <div>
                             <FacebookIcon /> <InstagramIcon /> <TwitterIcon /> <LinkedInIcon />
                         </div>
                     </div>
-                    <div className="col-md-3">
-                        <h3>Contact Us</h3>
+                    <div className="col-md-4">
+                        <h3 className='fw-bold'>Contact Us</h3>
                         <div className="phone d-flex align-items-center">
                             <div className="me-2">
                                 <LocalPhoneIcon />
@@ -58,16 +58,16 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-2">
+                    {/* <div className="col-md-2">
                         <h3>Support</h3>
                         <p>Contact Us</p>
                         <p>About Us</p>
                         <p>Destination</p>
                         <p>Our Blogs</p>
                         <p>Package</p>
-                    </div>
+                    </div> */}
                     <div className="col-md-3">
-                        <h3>We Accepts:</h3>
+                        <h3 className='fw-bold'>We Accepts:</h3>
                         <div>
                             <img src="https://i.ibb.co/SvXbhhW/download.png" alt="" />
                             <img src="https://i.ibb.co/grwfJ8J/download-1.png" alt="" />

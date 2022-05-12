@@ -39,6 +39,13 @@ const Header = () => {
                             >
                                 BLOG
                             </NavLink>
+                            <NavLink
+                                className="link"
+                                to="/aboutus"
+
+                            >
+                                ABOUT
+                            </NavLink>
                             {/* <NavLink
                                 className="link"
                                 to="/inventory/:id"
@@ -54,7 +61,7 @@ const Header = () => {
 
                                         <NavLink
                                             className="link"
-                                            to="/manageitems"
+                                            to="/inventory"
 
                                         >
                                             MANAGE ITEMS
@@ -73,7 +80,7 @@ const Header = () => {
                                         >
                                             MY ITEMS
                                         </NavLink>
-                                        <button className='btn btn-primary text-decoration-none ' onClick={handleSignOut}>SIGN OUT</button>
+                                        <button className='link-btn text-decoration-none ' onClick={handleSignOut}>SIGN OUT</button>
                                     </>
                                     :
                                     <NavLink

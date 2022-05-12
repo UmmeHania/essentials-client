@@ -5,5 +5,27 @@
 .manage-text {
     text-decoration: none;
     text-align: center;
+    color: white;
+    font-size: 18px;
 
+}
+
+.manage-text:hover {
+    color: white;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #1565c0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+
+    border: none;
+
+}
+
+.link-btn:hover {
+    background-color: #9279e6;
 }

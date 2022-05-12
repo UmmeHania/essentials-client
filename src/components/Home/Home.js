@@ -7,17 +7,36 @@ import './Home.css'
 import Featured from './Featured/Featured';
 import { Link } from 'react-router-dom';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import useProduct from '../hook/useProduct';
+import Product from './Product/Product';
 
 const Home = () => {
+    const [products, setProducts] = useProduct();
     return (
         <div className=''>
             <Banner></Banner>
             <hr />
             <h1 className='text-center fw-bold fs-1'>Inventory Items</h1>
             <hr />
-            <Products></Products>
+
+            <div className='container'>
+                <div className="products-container row row-cols-1 row-cols-md-3 g-4 mb-3">
+                    {
+                        products.slice(0, 6).map(product => <Product
+                            key={product._id}
+                            product={product}
+                        >
+                        </Product>)
+                    }
+                </div>
+            </div>
+
+
+
             <div className='text-center'>
-                <h5 className=''><Link className='manage-text' to='/manageitems'>Manage Items <ArrowCircleRightIcon className='fs-3'></ArrowCircleRightIcon></Link></h5>
+                <button className='link-btn mt-4'>
+                    <div className=''><Link className='manage-text' to='/inventory'>Manage Inventories <ArrowCircleRightIcon className=''></ArrowCircleRightIcon></Link></div>
+                </button>
             </div>
             <hr />
             <h1 className='text-center fw-bold fs-1'>Featured Products</h1>
@@ -25,8 +44,7 @@ const Home = () => {
             <Featured></Featured>
             <div className="background px-5 py-5 my-3">
                 <h4 className="text-center mb-5 fw-bold">WHY ESSENTIALS!</h4>
-                {/* <h1 className="text-center mb-2">Why You Are join With <br />ESSENTIALS
-                    ?</h1> */}
+
                 <div className="row mb-2">
 
                     <div className="col-3 card-ex">
