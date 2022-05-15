@@ -36,11 +36,9 @@ const Login = () => {
     if (user) {
         navigate(from, { replace: true });
     }
-    if (!user) {
-        navigate('/login')
-    }
-
-
+    /*  if (!user) {
+         navigate('/login')
+     } */
     const navigateRegister = () => {
         navigate('/register')
     }

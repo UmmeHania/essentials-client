@@ -2,7 +2,7 @@
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import useProduct from '../hook/useProduct';
 import { Card, CardGroup, Table } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ManageInventory1 = () => {
     const [products, setProducts] = useProduct();
@@ -22,6 +22,14 @@ const ManageInventory1 = () => {
                 })
         }
     }
+    const navigate = useNavigate();
+
+
+    const navigateToProductDetail = _id => {
+        navigate(`/inventory/${_id}`);
+
+    }
+
     return (
         <div className='container'>
             <div className="products-container row row-cols-1 row-cols-md-3 g-4 mb-3" >
@@ -48,6 +56,7 @@ const ManageInventory1 = () => {
                                             Quantity: {product?.quantity}
                                         </Card.Text>
                                     </Card.Body>
+                                    <button onClick={() => navigateToProductDetail(product._id)} className='link-btn'>Update</button>
 
                                     <button onClick={() => handleDelete(product._id)} className='link-btn'>DELETE <DeleteForeverIcon></DeleteForeverIcon>  </button>
 

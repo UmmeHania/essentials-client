@@ -3,16 +3,14 @@
 import { useForm } from "react-hook-form";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebase.int";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
+// import Loading from "../Home/Loading/Loading";
 
 const AddItem = () => {
     const [user] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
     const { email } = user;
 
-    if (!user) {
-        Navigate('/login')
-    }
 
     const onSubmit = data => {
         const url = `https://damp-badlands-61750.herokuapp.com/inventory`;
@@ -27,11 +25,10 @@ const AddItem = () => {
             .then(data => {
                 console.log(data)
                 if (data) {
-                    alert("Congrates! Product added");
+                    alert("Congrats! Product added");
                 }
             })
     };
-
     return (
         <div className='w-50 mx-auto'>
             <h2 className='text-center fw-bold'>Add Product here!</h2>

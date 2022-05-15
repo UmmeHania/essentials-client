@@ -44,10 +44,13 @@ function App() {
         <Route path='/inventory' element={
           <RequireAuth>
             <ManageInventory1 />
-
           </RequireAuth>
         } />
-        <Route path='/additem' element={<AddItem></AddItem>} />
+        <Route path='/additem' element={
+          <RequireAuth>
+            <AddItem />
+          </RequireAuth>
+        } />
         {/* <Route path='/inventory' element={<ManageInventory1></ManageInventory1>} /> */}
 
         <Route path="*" element={<NotFound></NotFound>}></Route>

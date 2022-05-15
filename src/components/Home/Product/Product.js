@@ -13,6 +13,7 @@ const Product = ({ product }) => {
 
     }
 
+
     return (
         <div className='product'>
             <CardGroup className="">
