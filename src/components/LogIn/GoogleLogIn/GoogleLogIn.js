@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import google from '../../Assets/google.png'
 import auth from '../../firebase.int';
 import Loading from '../../Home/Loading/Loading';
+import useToken from '../../hook/useToken';
 import './GoogleLogIn.css'
 
 const GoogleLogIn = () => {
@@ -11,22 +13,28 @@ const GoogleLogIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     const location = useLocation();
-
+    const [token] = useToken(user);
     let from = location.state?.from?.pathname || "/";
     let errorElement;
+    useEffect(() => {
+        if (token) {
+            toast.success("Login Success");
+            setTimeout(() => {
+                navigate(from, { replace: true });
+            }, 1000)
+        }
+    }, [token])
 
     if (error) {
         errorElement = <p className='text-danger'>Error: {error.message}</p>
     }
-
-
     if (loading) {
         return <Loading></Loading>
     }
 
-    if (user) {
-        navigate(from, { replace: true });
-    }
+    // if (user) {
+    //     navigate(from, { replace: true });
+    // }
 
     if (loading) {
         return <Loading></Loading>
@@ -38,6 +46,7 @@ const GoogleLogIn = () => {
     // if (user) {
     //     navigate('/inventory/:id')
     // }
+
 
 
     return (

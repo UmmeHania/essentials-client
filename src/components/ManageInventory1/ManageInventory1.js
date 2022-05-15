@@ -1,4 +1,4 @@
-import React from 'react';
+
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import useProduct from '../hook/useProduct';
 import { Card, CardGroup, Table } from 'react-bootstrap';
@@ -22,9 +22,6 @@ const ManageInventory1 = () => {
                 })
         }
     }
-
-
-
     return (
         <div className='container'>
             <div className="products-container row row-cols-1 row-cols-md-3 g-4 mb-3" >

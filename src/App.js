@@ -14,10 +14,9 @@ import ManageItems from './components/ManageItems/ManageItems';
 import MyItems from './components/MyItems/MyItems';
 import NotFound from './components/NotFound/NotFound';
 import Register from './components/Register/Register';
-import UpdateInventory from './components/UpdateInventory/UpdateInventory';
 
 
-
+//good job. ekhn amake email er oita kivabe korbo hints den. oita niye o time waste korsilam. pore folder soho delete kore disi -_- kno korechen :P ja korben rakhben
 function App() {
 
   return (
@@ -31,13 +30,18 @@ function App() {
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <Inventory></Inventory>
-            {/* <UpdateInventory></UpdateInventory> */}
+
           </RequireAuth>
         } />
         {/* <Route path='/inventory/:inventoryId' element={<Product></Product>} /> */}
         <Route path='/login' element={<LogIn></LogIn>} />
         <Route path='/register' element={<Register></Register>} />
-        <Route path='/myitems' element={<MyItems></MyItems>} />
+        <Route path='/myitems' element={
+          <RequireAuth>
+
+            <MyItems></MyItems>
+          </RequireAuth>
+        } />
         <Route path='/additem' element={<AddItem></AddItem>} />
         <Route path='/inventory' element={<ManageInventory1></ManageInventory1>} />
 

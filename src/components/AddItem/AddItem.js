@@ -1,12 +1,15 @@
+// import React from 'react';
 
-import React from 'react';
 import { useForm } from "react-hook-form";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../firebase.int";
 
 const AddItem = () => {
+    const [user] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
+    const { email } = user;
 
     const onSubmit = data => {
-        console.log(data);
         const url = `http://localhost:5000/inventory`;
         fetch(url, {
             method: 'POST',
@@ -17,16 +20,13 @@ const AddItem = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.insertId) {
-                    alert('Product added Successfully')
+                console.log(data)
+                if (data) {
+                    alert("Congrates!Product Added");
                 }
+
             })
     };
-
-
-
-
-
 
     return (
         <div className='w-50 mx-auto'>
@@ -38,83 +38,20 @@ const AddItem = () => {
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
                 <input className='mb-2' placeholder='Supplier Name' type="text" {...register("supplier")} />
                 <input className='mb-2' placeholder='Quantity' type="text" {...register("quantity")} />
-                <input type="submit" value="Add Product" />
+                <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder=" "
+                    required
+                    value={email}
+                    {...register("email")}
+                />
+                <input className='mb-2 link-btn w-50 mx-auto mt-2' type="submit" value="Add Product" />
+                <input className='mb-2 link-btn w-50 mx-auto' type="reset" ></input>
             </form>
         </div>
     );
 };
 
 export default AddItem;
-//return (
-//         <div>
-// //             <h1>add item</h1>
-
-// //         </div>
-//     );
-// };
-
-// export default AddItem;
-// import React, { useRef } from 'react';
-// import { Container } from 'react-bootstrap';
-// import './AddItem.css'
-
-// const AddItem = () => {
-//     const nameRef = useRef();
-//     const priceRef = useRef();
-//     const quantityRef = useRef();
-//     const supplierRef = useRef();
-//     const descRef = useRef();
-//     const imgRef = useRef();
-//     const handleSubmit = (e) => {
-//         const name = nameRef.current.value;
-//         const price = priceRef.current.value;
-//         const quantity = quantityRef.current.value;
-//         const supplier = supplierRef.current.value;
-//         const description
-//             = descRef.current.value;
-//         const img = imgRef.current.value;
-//         const newProduct = {
-//             name, price, quantity, supplier, description
-//             , img
-//         }
-//         fetch('https://', {
-//             method: 'POST',
-//             headers: {
-//                 'content-type': 'application/json'
-//             },
-//             body: JSON.stringify(newProduct)
-//         })
-//             .then(res => res.json())
-//             .then(data => {
-//                 if (data.insertedId) {
-//                     alert('Product added Successfully')
-//                     e.target.reset();
-//                 }
-//             })
-//         e.preventDefault()
-//     }
-//     return (
-//         <div>
-//             <Container className="py-5">
-//                 <div className="row">
-//                     <div className="col-md-12">
-//                         <h3 className="text-center fw-bold">Add a Product here!</h3>
-//                     </div>
-//                 </div>
-//                 <div className="row ">
-//                     <form className="col-md-5 mx-auto" onSubmit={handleSubmit}>
-//                         <input type="text" ref={nameRef} placeholder="Name of the Product" />
-//                         <input type="text" ref={priceRef} placeholder="Price" />
-//                         <input type="text" ref={quantityRef} placeholder="quantity" />
-//                         <input type="text" ref={supplierRef} placeholder="supplier" />
-//                         <textarea placeholder="Add description" ref={descRef} cols="30" rows="10"></textarea>
-//                         <input type="text" ref={imgRef} placeholder="place an image link of your product" />
-//                         <input className='submit' type="submit" value="Submit" />
-//                     </form>
-//                 </div>
-//             </Container>
-//    </div >
-//    );
-//  };
-
-// export default AddItem;

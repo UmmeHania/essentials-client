@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -9,12 +9,13 @@ import GoogleLogIn from './GoogleLogIn/GoogleLogIn';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './LogIn.css'
-
+import useToken from '../hook/useToken'
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
+
 
     let from = location.state?.from?.pathname || "/";
     let errorElement;
@@ -28,6 +29,7 @@ const Login = () => {
     if (error) {
         errorElement = <p className='text-danger'>Error: {error.message}</p>
     }
+    const [token] = useToken(user);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
@@ -50,6 +52,14 @@ const Login = () => {
         }
 
     }
+    useEffect(() => {
+        if (token) {
+            toast.success("Login Success");
+            setTimeout(() => {
+                navigate(from, { replace: true });
+            }, 1000)
+        }
+    }, [token])
 
     const handleSubmit = event => {
         event.preventDefault();

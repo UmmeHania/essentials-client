@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const useProduct = () => {
+const useProduct = (productId) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:5000/inventory')
             .then(res => res.json())
             .then(data => setProducts(data));
-    }, [])
+    }, [productId])
     return [products, setProducts];
 };
 

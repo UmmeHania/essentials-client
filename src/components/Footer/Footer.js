@@ -1,5 +1,5 @@
 
-import React from 'react';
+// import React from 'react';
 import { Container } from 'react-bootstrap';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -58,14 +58,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="col-md-2">
-                        <h3>Support</h3>
-                        <p>Contact Us</p>
-                        <p>About Us</p>
-                        <p>Destination</p>
-                        <p>Our Blogs</p>
-                        <p>Package</p>
-                    </div> */}
+
                     <div className="col-md-3">
                         <h3 className='fw-bold'>We Accepts:</h3>
                         <div>
