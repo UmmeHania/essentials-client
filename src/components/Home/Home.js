@@ -2,7 +2,6 @@ import React from 'react';
 import { CCard, CCardBody, CCardImage, CCardText, CCardTitle, CCol, CRow } from '@coreui/react';
 import { Container } from 'react-bootstrap';
 import Banner from './Banner/Banner';
-import Products from './Products/Products';
 import './Home.css'
 import Featured from './Featured/Featured';
 import { Link } from 'react-router-dom';

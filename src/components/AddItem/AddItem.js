@@ -3,14 +3,19 @@
 import { useForm } from "react-hook-form";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebase.int";
+import { Navigate } from "react-router-dom";
 
 const AddItem = () => {
     const [user] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
     const { email } = user;
 
+    if (!user) {
+        Navigate('/login')
+    }
+
     const onSubmit = data => {
-        const url = `http://localhost:5000/inventory`;
+        const url = `https://damp-badlands-61750.herokuapp.com/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -22,9 +27,8 @@ const AddItem = () => {
             .then(data => {
                 console.log(data)
                 if (data) {
-                    alert("Congrates!Product Added");
+                    alert("Congrates! Product added");
                 }
-
             })
     };
 

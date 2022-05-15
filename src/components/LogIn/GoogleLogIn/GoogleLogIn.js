@@ -14,7 +14,9 @@ const GoogleLogIn = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [token] = useToken(user);
+
     let from = location.state?.from?.pathname || "/";
+
     let errorElement;
     useEffect(() => {
         if (token) {
@@ -32,22 +34,10 @@ const GoogleLogIn = () => {
         return <Loading></Loading>
     }
 
-    // if (user) {
-    //     navigate(from, { replace: true });
-    // }
 
     if (loading) {
         return <Loading></Loading>
     }
-    // if (user) {
-    //     navigate(`/inventory/${id}`)
-    // }
-    // <Loading></Loading>
-    // if (user) {
-    //     navigate('/inventory/:id')
-    // }
-
-
 
     return (
         <div>

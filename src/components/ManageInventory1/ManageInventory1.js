@@ -10,7 +10,7 @@ const ManageInventory1 = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Delete this product forever?');
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://damp-badlands-61750.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

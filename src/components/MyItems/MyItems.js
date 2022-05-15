@@ -14,7 +14,8 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user?.email;
-            const url = `http://localhost:5000/myItems?email=${email}`;
+            const url = `https://damp-badlands-61750.herokuapp.com/myItems?email=${email}`;
+            console.log(url);
             try {
                 const { data } = await axiosPrivate.get(url);
                 setItems(data);

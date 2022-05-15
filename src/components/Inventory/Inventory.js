@@ -11,7 +11,7 @@ const Inventory = () => {
     const { _id, name, img, price, description, quantity, supplier } = product;
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://damp-badlands-61750.herokuapp.com/inventory/${id}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => setProduct(data));
@@ -24,7 +24,7 @@ const Inventory = () => {
             let quantityAdd = parseInt(quantity) + inputValue;
 
             // send data to server
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://damp-badlands-61750.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: "PUT",
                 headers: {
@@ -49,7 +49,7 @@ const Inventory = () => {
             if (quantity > -1) {
                 let quantityMinus = quantity - 1;
 
-                const url = `http://localhost:5000/inventory/${id}`;
+                const url = `https://damp-badlands-61750.herokuapp.com/inventory/${id}`;
                 fetch(url, {
                     method: "PUT",
                     body: JSON.stringify({
