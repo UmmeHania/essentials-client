@@ -22,8 +22,8 @@ const ManageInventory1 = () => {
                 })
         }
     }
-    const navigate = useNavigate();
 
+    const navigate = useNavigate();
 
     const navigateToProductDetail = _id => {
         navigate(`/inventory/${_id}`);
@@ -56,10 +56,15 @@ const ManageInventory1 = () => {
                                             Quantity: {product?.quantity}
                                         </Card.Text>
                                     </Card.Body>
-                                    <button onClick={() => navigateToProductDetail(product._id)} className='link-btn'>Update</button>
+                                    {/* <button onClick={() => navigateToProductDetail(product._id)} className='link-btn'>Update</button>
 
-                                    <button onClick={() => handleDelete(product._id)} className='link-btn'>DELETE <DeleteForeverIcon></DeleteForeverIcon>  </button>
-
+                                    <button onClick={() => handleDelete(product._id)} className='link-btn'>DELETE <DeleteForeverIcon></DeleteForeverIcon>  </button> */}
+                                    <Card.Footer>
+                                        <div className='d-flex justify-content-between'>
+                                            <button onClick={() => navigateToProductDetail(product._id)} className='link-btn'>Update</button>
+                                            <button className='' onClick={() => handleDelete(product._id)}><DeleteForeverIcon className='text-danger fs-1' ></DeleteForeverIcon></button>
+                                        </div>
+                                    </Card.Footer>
                                 </Card>
                             </CardGroup>
                         </div>

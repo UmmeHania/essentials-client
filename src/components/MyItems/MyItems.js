@@ -30,7 +30,7 @@ const MyItems = () => {
     }, [reload, user]);
 
 
-    console.log(items);
+
 
 
     return (
